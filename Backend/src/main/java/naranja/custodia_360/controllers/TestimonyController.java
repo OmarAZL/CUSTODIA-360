@@ -11,6 +11,7 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/v1/testimonies")
+@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 public class TestimonyController {
 
     private final TestimonyService testimonyService;
