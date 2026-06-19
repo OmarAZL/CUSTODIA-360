@@ -17,11 +17,6 @@ public class TestimonyController {
     private final TestimonyService testimonyService;
     private final AiService aiService;
 
-    @GetMapping()
-    public String testEndpoint() {
-        return "El Endpoint deberia funcionar";
-    }
-
     public TestimonyController(TestimonyService testimonyService, AiService aiService) {
 
         this.testimonyService = testimonyService;
