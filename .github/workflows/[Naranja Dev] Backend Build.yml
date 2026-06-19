@@ -1,4 +1,4 @@
-name: Backend - Spring Boot CI
+name: Naranja - Backend Build Dev
 
 on:
   push:
