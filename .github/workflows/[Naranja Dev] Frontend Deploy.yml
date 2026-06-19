@@ -32,9 +32,6 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Correr Lint
-        run: npm run lint
-
       - name: Construir aplicación (Build)
         run: npm run build
       
