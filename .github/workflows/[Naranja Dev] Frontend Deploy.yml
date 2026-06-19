@@ -35,7 +35,7 @@ jobs:
       - name: Construir aplicación (Build)
         run: npm run build
       
-      - name: Deploy a Vercel (DEV)
+      - name: Deploy a Vercel (Preview)
         run: |
           npm install -g vercel
           vercel --token=${{ secrets.NARANJA_VERCEL_TOKEN }} --yes
