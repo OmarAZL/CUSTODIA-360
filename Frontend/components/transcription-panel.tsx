@@ -78,7 +78,7 @@ export function TranscriptionPanel() {
 
       const data: AiReport = await response.json()
       setReport(data);
-      setIsModalOpen(true)
+      setIsModalOpen(true) 
 
       toast({
         title: "Testimonio procesado",
