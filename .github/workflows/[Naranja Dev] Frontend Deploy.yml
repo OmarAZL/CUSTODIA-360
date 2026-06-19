@@ -2,11 +2,11 @@ name: Frontend - Equipo Naranja
 
 on:
   push:
-    branches: [ front_GL ]
+    branches: [ front_GL, Backend ]
     paths:
       - 'Frontend/**'
   pull_request:
-    branches: [ main ]
+    branches: [ front_GL, Backend ]
     paths:
       - 'Frontend/**'
 
@@ -37,3 +37,11 @@ jobs:
 
       - name: Construir aplicación (Build)
         run: npm run build
+      
+      - name: Deploy a Vercel (DEV)
+        run: |
+          npm install -g vercel
+          vercel --token=${{ secrets.NARANJA_VERCEL_TOKEN }} --yes
+        env:
+          VERCEL_ORG_ID: ${{ secrets.NARANJA_VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.NARANJA_VERCEL_PROJECT_ID }}

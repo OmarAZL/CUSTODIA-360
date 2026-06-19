@@ -2,11 +2,11 @@ name: Backend - Spring Boot CI
 
 on:
   push:
-    branches: [ Backend ]
+    branches: [ Backend, front_GL ]
     paths:
       - 'Backend/**'
   pull_request:
-    branches: [ main ]
+    branches: [ Backend, front_GL ]
     paths:
       - 'Backend/**'
 
