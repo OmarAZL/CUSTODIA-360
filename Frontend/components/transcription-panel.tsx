@@ -81,7 +81,7 @@ export function TranscriptionPanel() {
       setIsModalOpen(true) 
 
       toast({
-        title: "Testimonio procesado",
+        title: "Testimonio procesado", 
         description: "El informe legal ha sido generado por la IA con éxito.",
       });
 
