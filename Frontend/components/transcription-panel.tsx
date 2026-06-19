@@ -421,7 +421,7 @@ export function TranscriptionPanel() {
               {/* Paso 3: Espera de la IA (Aquí es donde se queda el spinner) */}
               <Loader2 className="h-4 w-4 text-primary animate-spin" />
               <span className="font-medium text-primary animate-pulse">Redactando informe analítico con IA...</span>
-            </div>
+            </div> 
           </div>
 
           <p className="text-[11px] text-muted-foreground italic pt-2">
