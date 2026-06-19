@@ -59,7 +59,7 @@ export function TranscriptionPanel() {
       const audioBlob = new Blob(audioChunksRef.current, { type: audioChunksRef.current[0].type })
 
       const formData = new FormData()
-      
+    
       const transcription = textSnapshotRef.current
       formData.append('audio', audioBlob, `audio_testimonio_${Date.now()}.webm`)
       formData.append('transcription', transcription)
