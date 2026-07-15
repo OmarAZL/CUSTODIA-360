@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: teams/naranja/Frontend
+        working-directory: Frontend
 
     steps:
       - name: Checkout del código
@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-          cache-dependency-path: teams/naranja/Frontend/package-lock.json
+          cache-dependency-path: Frontend/package-lock.json
 
       - name: Instalar dependencias
         run: npm ci
@@ -53,7 +53,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: vercel-production-build
-          path: teams/naranja/Frontend/.vercel
+          path: Frontend/.vercel
           retention-days: 1
 
   # ==========================================
@@ -75,7 +75,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: vercel-production-build
-          path: teams/naranja/Frontend/.vercel
+          path: Frontend/.vercel
 
       # Instalamos Vercel CLI globalmente en este runner para hacer el deploy
       - name: Instalar Vercel CLI
